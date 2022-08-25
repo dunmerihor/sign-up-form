@@ -7,43 +7,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-up Form</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
     <div class="left-side">
         <div class="logo">LOGO</div>
+        <div class="credit">Photo by <a href="https://unsplash.com/@ayumikubo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">ayumi kubo</a> on 
+            <a href="https://unsplash.com/t/street-photography?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></div>
     </div>
 
     <div class="right-side">
+        <p>This is not a real online service! You know you need something like this
+            in your life to help you realize your deepest dreams. Sign up <i>right now</i>
+            to get started.
+        </p>
+
+        <p>You <i>know</i> you want to.</p>
+
         <form action="">
-            <header class="form-header">Let's do this!</header>
-
             <div class="form-inputs">
+                <header class="form-header">Let's do this!</header>
+
                 <fieldset>
-                    <label for="first-name">FIRST NAME</label>
-                    <input type="text" name="first-name" id="first-name">
-                    <label for="last-name">LAST NAME</label>
-                    <input type="text" name="last-name" id="last-name">
+                    <div>
+                        <label for="first-name">FIRST NAME</label>
+                        <input type="text" name="first-name" id="first-name" placeholder=" " required>
+                        <span class="error"></span>
+                    </div>
+
+                    <div>
+                        <label for="last-name">LAST NAME</label>
+                        <input type="text" name="last-name" id="last-name" placeholder=" " required>
+                        <span class="error"></span>
+                    </div>
                 </fieldset>
 
                 <fieldset>
-                    <label for="mail">EMAIL</label>
-                    <input type="email" name="mail" id="mail">
+                    <div>
+                        <label for="mail">EMAIL</label>
+                        <input type="email" name="mail" id="mail" placeholder=" " required>
+                        <span class="error"></span>
+                    </div>
                 
-                    <label for="phone-number">PHONE NUMBER</label>
-                    <input type="tel" name="phone-number" id="phone-number">
+                    <div>
+                        <label for="phone-number">PHONE NUMBER</label>
+                        <input type="tel" name="phone-number" id="phone-number" placeholder=" " required>
+                        <span class="error"></span>
+                    </div>
                 </fieldset>
 
                 <fieldset>
-                    <label for="password">PASSWORD</label>
-                    <input type="password" name="password" id="password">
-                    <label for="confirm-password">CONFIRM PASSWORD</label>
-                    <input type="password" name="confirm-password" id="confirm-password">
+                    <div>
+                        <label for="password">PASSWORD</label>
+                        <input type="password" name="password" id="password" placeholder=" " required>
+                        <span class="error"></span>
+                    </div>
+
+                    <div>
+                        <label for="confirm-password">CONFIRM PASSWORD</label>
+                        <input type="password" name="confirm-password" id="confirm-password" placeholder=" " required>
+                        <span class="message"></span>
+                    </div>
                 </fieldset>
             </div>
 
             <button type="submit">Create Account</button>
         </form>
+
+        <div class="log-in">Already have an account? <a href="">Log in</a></div>
     </div>
 </body>
 

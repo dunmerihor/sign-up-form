@@ -1,0 +1,182 @@
+:root {
+    --min-height: 800px;
+}
+
+@font-face {
+    font-family: "norwester";
+    src: url(fonts/norwester-webfont.woff),
+         url(fonts/norwester-webfont.woff2);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "opensans";
+    src: url(fonts/opensans-regular-webfont.woff),
+         url(fonts/opensans-regular-webfont.woff2);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "opensans";
+    src: url(fonts/opensans-bold-webfont.woff),
+         url(fonts/opensans-bold-webfont.woff2);
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "opensans";
+    src: url(fonts/opensans-bolditalic-webfont.woff),
+         url(fonts/opensans-bolditalic-webfont.woff2);
+    font-weight: 900;
+    font-style: italic;
+}
+
+body {
+    font-family: 'opensans';
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.left-side {
+    background-image: url(background-image.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: max(var(--min-height), 100vh);
+    width: max(calc(var(--min-height) * 2 / 3), calc(100vh * 2 / 3));
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: "norwester";
+    font-size: 68px;
+    text-align: center;
+    background-color: rgba(37, 37, 37, 0.4);
+    color: aliceblue;
+    width: max(calc(var(--min-height) * 2 / 3), calc(100vh * 2 / 3));
+    height: 68px;
+    position: relative;
+    top: 40vh;
+}
+
+.credit {
+    color: white;
+    justify-self: flex-end;
+    align-self: center;
+    margin: 10px;
+}
+
+.credit > a {
+    color: white;
+}
+
+.form-inputs {
+   background-color: whitesmoke;
+   padding: 20px 50px;
+   box-shadow: 0px 1px 5px grey;
+}
+
+fieldset {
+    border: none;
+    display: flex;
+    padding: 10px 0px;
+    margin: 10px 0px;
+}
+
+fieldset > div {
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+fieldset > div > label {
+    position: absolute;
+    bottom: 32px;
+    font-size: small;
+    font-weight: 900;
+}
+
+.right-side {
+    background-color: rgb(231, 231, 231);
+    height: 100vh;
+    width: min(calc(100vw - calc(var(--min-height) * 2 / 3)), calc(100vw - calc(100vh * 2 / 3)));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-header {
+    font-size: 24px;
+    font-weight: 900;
+    margin: 0px 0px 30px 0px;
+}
+
+p {
+    font-size: 24px;
+    font-weight: 900;
+    margin: 0px 0px 40px 50px;
+    width: 600px;
+}
+
+button {
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: 900;
+    color: white;
+    background-color: #596D48;
+    border: none;
+    border-radius: 6px;
+    margin: 30px 0px 30px 50px;
+    width: 170px;
+    height: 45px;
+}
+
+button:hover {
+    background-color: #4c5e3d;
+}
+
+button:active {
+    background-color: #38462d;
+}
+
+.log-in {
+    font-size: 18px;
+    margin-left: 50px;
+}
+
+.log-in > a {
+    color: #596D48;
+}
+
+input {
+    font-family: inherit;
+    font-size: 100%;
+    border: 1px rgb(206, 206, 206) solid;
+    border-radius: 3px;
+    width: 250px;
+    height: 28px;
+    margin-right: 35px;
+}
+
+input:focus {
+    outline: none !important;
+    border: 1px rgb(0, 119, 255) solid;
+    box-shadow: 1px 1px 3px grey;
+}
+
+input:invalid {
+    outline: none !important;
+    border: 1px red solid;
+}
+
+input:placeholder-shown {
+    outline: none !important;
+    border: 1px rgb(206, 206, 206) solid;
+}
